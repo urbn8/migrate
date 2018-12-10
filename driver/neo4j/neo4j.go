@@ -5,11 +5,12 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/jmcvetta/neoism"
-	"gopkg.in/mattes/migrate.v1/driver"
-	"gopkg.in/mattes/migrate.v1/file"
-	"gopkg.in/mattes/migrate.v1/migrate/direction"
 	"strings"
+
+	"github.com/jmcvetta/neoism"
+	"github.com/urbn8/migrator/driver"
+	"github.com/urbn8/migrator/file"
+	"github.com/urbn8/migrator/migrate/direction"
 )
 
 type Driver struct {

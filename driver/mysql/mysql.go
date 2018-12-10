@@ -12,9 +12,9 @@ import (
 	"strings"
 
 	"github.com/go-sql-driver/mysql"
-	"gopkg.in/mattes/migrate.v1/driver"
-	"gopkg.in/mattes/migrate.v1/file"
-	"gopkg.in/mattes/migrate.v1/migrate/direction"
+	"github.com/urbn8/migrator/driver"
+	"github.com/urbn8/migrator/file"
+	"github.com/urbn8/migrator/migrate/direction"
 )
 
 type Driver struct {
@@ -53,8 +53,7 @@ func (driver *Driver) Close() error {
 
 func (driver *Driver) ensureVersionTableExists() error {
 	_, err := driver.db.Exec("CREATE TABLE IF NOT EXISTS " + tableName + " (version int not null primary key);")
-
-	if _, isWarn := err.(mysql.MySQLWarnings); err != nil && !isWarn {
+	if err != nil {
 		return err
 	}
 

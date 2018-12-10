@@ -5,7 +5,7 @@ import (
 	"fmt"
 	neturl "net/url" // alias to allow `url string` func signature in New
 
-	"gopkg.in/mattes/migrate.v1/file"
+	"github.com/urbn8/migrator/file"
 )
 
 // Driver is the interface type that needs to implemented by all drivers.

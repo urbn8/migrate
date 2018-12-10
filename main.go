@@ -1,6 +1,6 @@
 // Package main is the CLI.
 // You can use the CLI via Terminal.
-// import "gopkg.in/mattes/migrate.v1/migrate" for usage within Go.
+// import "github.com/urbn8/migrator/migrate" for usage within Go.
 package main
 
 import (
@@ -11,19 +11,19 @@ import (
 	"time"
 
 	"github.com/fatih/color"
-	_ "gopkg.in/mattes/migrate.v1/driver/bash"
-	_ "gopkg.in/mattes/migrate.v1/driver/cassandra"
-	_ "gopkg.in/mattes/migrate.v1/driver/crate"
-	_ "gopkg.in/mattes/migrate.v1/driver/mssql"
-	_ "gopkg.in/mattes/migrate.v1/driver/mysql"
-	_ "gopkg.in/mattes/migrate.v1/driver/neo4j"
-	_ "gopkg.in/mattes/migrate.v1/driver/postgres"
-	_ "gopkg.in/mattes/migrate.v1/driver/ql"
-	_ "gopkg.in/mattes/migrate.v1/driver/sqlite3"
-	"gopkg.in/mattes/migrate.v1/file"
-	"gopkg.in/mattes/migrate.v1/migrate"
-	"gopkg.in/mattes/migrate.v1/migrate/direction"
-	pipep "gopkg.in/mattes/migrate.v1/pipe"
+	_ "github.com/urbn8/migrator/driver/bash"
+	_ "github.com/urbn8/migrator/driver/cassandra"
+	_ "github.com/urbn8/migrator/driver/crate"
+	_ "github.com/urbn8/migrator/driver/mssql"
+	_ "github.com/urbn8/migrator/driver/mysql"
+	_ "github.com/urbn8/migrator/driver/neo4j"
+	_ "github.com/urbn8/migrator/driver/postgres"
+	_ "github.com/urbn8/migrator/driver/ql"
+	_ "github.com/urbn8/migrator/driver/sqlite3"
+	"github.com/urbn8/migrator/file"
+	"github.com/urbn8/migrator/migrate"
+	"github.com/urbn8/migrator/migrate/direction"
+	pipep "github.com/urbn8/migrator/pipe"
 )
 
 var url = flag.String("url", os.Getenv("MIGRATE_URL"), "")

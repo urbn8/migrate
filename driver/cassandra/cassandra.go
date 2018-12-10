@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/gocql/gocql"
-	"gopkg.in/mattes/migrate.v1/driver"
-	"gopkg.in/mattes/migrate.v1/file"
-	"gopkg.in/mattes/migrate.v1/migrate/direction"
+	"github.com/urbn8/migrator/driver"
+	"github.com/urbn8/migrator/file"
+	"github.com/urbn8/migrator/migrate/direction"
 )
 
 // Driver implements migrate Driver interface
